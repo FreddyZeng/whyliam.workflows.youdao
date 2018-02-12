@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 import sys
 import os
+import string
+import time
 from workflow import Workflow3
 
 reload(sys)
-sys.setdefaultencoding('utf8')
+sys.setdefaultencoding('utf-8')
 
 
 def getargs(wf):
@@ -24,7 +26,15 @@ def getargs(wf):
         sys.stdout.write(query[0].strip())
     elif part == 1:
         # 翻过的结果
-        sys.stdout.write(query[1].strip())
+        englishString = query[1]
+        englishString = englishString.strip().title()
+        englishString = englishString.replace(" ","")
+
+        chineseString = query[0]
+
+        timeString = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
+
+        sys.stdout.write( "ICX_sphygmomanometer_"+ englishString + '\t' + chineseString + '\t' + "" + '\t' + timeString)
     elif part == 2:
         # 发音
         if query[2]:
