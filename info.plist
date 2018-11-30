@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>whyliam.workflows.youdao</string>
+	<key>category</key>
+	<string>Tools</string>
 	<key>connections</key>
 	<dict>
 		<key>27E60581-8105-41DD-8E29-4FE811179098</key>
@@ -20,10 +22,12 @@
 			</dict>
 		</array>
 		<key>5751065C-52C1-4D19-8F7D-03B730BFE440</key>
+		<array/>
+		<key>7C1ABC41-3B36-401F-96C7-30BCB39181FF</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>91C343E7-50D8-4B0D-9034-1C16C20DA8D4</string>
+				<string>0907BEF4-816F-48FF-B157-03F5C2AACEAB</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -32,11 +36,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>7C1ABC41-3B36-401F-96C7-30BCB39181FF</key>
+		<key>7CAE8B02-CE31-4941-AD5F-C36CC84D164B</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>0907BEF4-816F-48FF-B157-03F5C2AACEAB</string>
+				<string>DA8E4597-4B45-4C4C-A8D0-755BD785BD7A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -87,29 +91,13 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
-		</array>
-		<key>DBA62127-3B78-4B80-B82B-1C6AEC393003</key>
-		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>E6B27298-B466-40D6-A554-07C60F046F1D</string>
+				<string>7CAE8B02-CE31-4941-AD5F-C36CC84D164B</string>
 				<key>modifiers</key>
-				<integer>0</integer>
+				<integer>524288</integer>
 				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>E6B27298-B466-40D6-A554-07C60F046F1D</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>D673BD95-CBD1-49CB-B22C-CB2D72842A38</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
+				<string>同步到单词本</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -141,25 +129,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>http://dict.youdao.com/search?q={query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>6A03FDC5-89AC-4F9D-9456-3762ACA751FE</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -179,6 +148,25 @@
 			<string>F99C4C55-10F5-4D62-A77D-F27058629B21</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://dict.youdao.com/search?q={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>6A03FDC5-89AC-4F9D-9456-3762ACA751FE</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -215,7 +203,7 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
-				<integer>35</integer>
+				<integer>32</integer>
 				<key>keyword</key>
 				<string>yd</string>
 				<key>queuedelaycustom</key>
@@ -253,33 +241,17 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>action</key>
-				<integer>1</integer>
-				<key>argument</key>
-				<integer>1</integer>
-				<key>argumenttext</key>
-				<string>yd </string>
-				<key>focusedappvariable</key>
+				<key>autopaste</key>
 				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>12</integer>
-				<key>hotmod</key>
-				<integer>524288</integer>
-				<key>hotstring</key>
-				<string>Q</string>
-				<key>leftcursor</key>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
 				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
+			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>5751065C-52C1-4D19-8F7D-03B730BFE440</string>
+			<string>DBA62127-3B78-4B80-B82B-1C6AEC393003</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -309,40 +281,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>DBA62127-3B78-4B80-B82B-1C6AEC393003</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>0907BEF4-816F-48FF-B157-03F5C2AACEAB</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -366,46 +304,100 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>adduuid</key>
-				<false/>
-				<key>allowemptyfiles</key>
+				<key>autopaste</key>
 				<true/>
-				<key>createintermediatefolders</key>
-				<false/>
-				<key>filename</key>
-				<string>~/Desktop/PostTranslation</string>
-				<key>filetext</key>
+				<key>clipboardtext</key>
 				<string>{query}</string>
-				<key>relativepathmode</key>
-				<integer>0</integer>
-				<key>type</key>
-				<integer>2</integer>
+				<key>transient</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.writefile</string>
+			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>E6B27298-B466-40D6-A554-07C60F046F1D</string>
+			<string>0907BEF4-816F-48FF-B157-03F5C2AACEAB</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
+				<key>action</key>
+				<integer>1</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>argumenttext</key>
+				<string>yd </string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
 				<string></string>
-				<key>sourcefile</key>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
 				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
+			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
-			<string>D673BD95-CBD1-49CB-B22C-CB2D72842A38</string>
+			<string>5751065C-52C1-4D19-8F7D-03B730BFE440</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>38</integer>
+				<key>script</key>
+				<string>/usr/bin/python saveword.py "{query}" "us" -username yourname -password yoursecret</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>7CAE8B02-CE31-4941-AD5F-C36CC84D164B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>DA8E4597-4B45-4C4C-A8D0-755BD785BD7A</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>有道翻译 Workflow v2.1.0
+	<string>有道翻译 Workflow v2.2.0
 
 默认快捷键 yd, 查看翻译结果。
 
@@ -414,6 +406,7 @@
 3. 翻译短语句子
 4. 打开有道翻译页面，查看详细内容
 5. 直接在打出翻译结果
+6. 显示历史查询记录
 
 功能
 
@@ -422,6 +415,7 @@
 3. 按`Comman+回车`直接在打出翻译结果
 4. 按`Shift+回车`直接发音
 5. 选中文字 双击`Command`进行翻译
+6. `yd *` 显示历史查询记录
 
 更多
 参见 https://blog.naaln.com/2017/04/alfred-youdao-intro/</string>
@@ -432,7 +426,7 @@
 			<key>xpos</key>
 			<integer>830</integer>
 			<key>ypos</key>
-			<integer>440</integer>
+			<integer>420</integer>
 		</dict>
 		<key>27E60581-8105-41DD-8E29-4FE811179098</key>
 		<dict>
@@ -453,9 +447,9 @@
 			<key>note</key>
 			<string>双击设置快捷方式</string>
 			<key>xpos</key>
-			<integer>30</integer>
+			<integer>270</integer>
 			<key>ypos</key>
-			<integer>250</integer>
+			<integer>440</integer>
 		</dict>
 		<key>6A03FDC5-89AC-4F9D-9456-3762ACA751FE</key>
 		<dict>
@@ -469,7 +463,14 @@
 			<key>xpos</key>
 			<integer>500</integer>
 			<key>ypos</key>
-			<integer>440</integer>
+			<integer>410</integer>
+		</dict>
+		<key>7CAE8B02-CE31-4941-AD5F-C36CC84D164B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<integer>560</integer>
 		</dict>
 		<key>91C343E7-50D8-4B0D-9034-1C16C20DA8D4</key>
 		<dict>
@@ -478,16 +479,12 @@
 			<key>ypos</key>
 			<integer>250</integer>
 		</dict>
-		<key>D673BD95-CBD1-49CB-B22C-CB2D72842A38</key>
+		<key>DA8E4597-4B45-4C4C-A8D0-755BD785BD7A</key>
 		<dict>
-			<key>colorindex</key>
-			<integer>8</integer>
-			<key>note</key>
-			<string>Open the file this workflow has created</string>
 			<key>xpos</key>
-			<integer>980</integer>
+			<integer>830</integer>
 			<key>ypos</key>
-			<integer>650</integer>
+			<integer>560</integer>
 		</dict>
 		<key>DBA62127-3B78-4B80-B82B-1C6AEC393003</key>
 		<dict>
@@ -495,17 +492,6 @@
 			<integer>830</integer>
 			<key>ypos</key>
 			<integer>290</integer>
-		</dict>
-		<key>E6B27298-B466-40D6-A554-07C60F046F1D</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>8</integer>
-			<key>note</key>
-			<string>PostTranslation</string>
-			<key>xpos</key>
-			<integer>680</integer>
-			<key>ypos</key>
-			<integer>650</integer>
 		</dict>
 		<key>F99C4C55-10F5-4D62-A77D-F27058629B21</key>
 		<dict>
@@ -534,7 +520,7 @@
 		<string>zhiyun_key</string>
 	</array>
 	<key>version</key>
-	<string>2.1.0</string>
+	<string>2.2.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/liszd/whyliam.workflows.youdao</string>
 </dict>

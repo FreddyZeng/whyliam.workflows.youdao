@@ -1,6 +1,6 @@
 # whyliam.workflows.youdao
 
-## 有道翻译 workflow v2.1.1
+## 有道翻译 workflow v2.2.0
 
 默认快捷键 `yd`，查看翻译结果。
 
@@ -9,6 +9,8 @@
 3. 翻译短语句子
 4. 打开有道翻译页面，查看详细内容
 5. 直接在打出翻译结果
+6. 显示历史查询记录
+7. 同步单词到有道在线单词本
 
 ### 功能
 
@@ -17,10 +19,12 @@
 3. 按`Command ⌘+回车` 直接在打出翻译结果
 4. 按`Shift ⇧+回车` 直接发音
 5. 选中文字 双击`Option ⌥`进行翻译（需要另行设置）
+6. `yd *` 显示历史查询记录
+7. 按`Alt+回车`, 同步单词到有道在线单词本
 
 ### 下载
 
-[点击下载](https://github.com/liszd/whyliam.workflows.youdao/releases/download/2.1.1/whyliam.workflows.youdao.alfredworkflow)
+[点击下载](https://github.com/liszd/whyliam.workflows.youdao/releases/download/2.2.0/whyliam.workflows.youdao.alfredworkflow)
 
 ### 安装
 
@@ -47,7 +51,7 @@
 
 ### 问题
 
-如果新版本有道智云遇到问题，请参见 [错误代码列表](http://ai.youdao.com/docs/api.s#id6)。
+如果新版本有道智云遇到问题，请参见 [错误代码列表](http://ai.youdao.com/docs/doc-trans-api.s#p06)。
 
 ### 演示
 
@@ -78,6 +82,12 @@
 #### 双击快速翻译 - 双击`Option ⌥`
 
 ![](http://ww1.sinaimg.cn/large/006tNbRwgy1fenosusv0bg30qn0qpq7a.gif)
+
+#### 同步单词到有道在线单词本 - `Alt+回车`
+
+![](http://oqhtscus0.bkt.clouddn.com/4ed0a90dcfbdb62ba614b9d18bc320d7.jpg)
+
+在 `yourname`、`yoursecret` 处分别填写网易云邮箱和密码，接着按 `Alt+回车` 就能将词库存进网易有道词典的单词本。
 
 ### 更多
 
