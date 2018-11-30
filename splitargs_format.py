@@ -40,7 +40,21 @@ def getargs(wf):
         sys.stdout.write(query[0].strip())
     elif part == 1:
         # 翻过的结果
-        sys.stdout.write(query[1].strip())
+        isChinese = contain_zh(query[1])
+        
+        if isChinese:
+            chineseString = query[1]
+            englishString = query[0]
+        else:
+            chineseString = query[0]
+            englishString = query[1]
+
+        englishString = englishString.strip().title()
+        englishString = englishString.replace(" ","")
+
+        timeString = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
+
+        sys.stdout.write( "ICX_sphygmomanometer_"+ englishString + '\t' + chineseString + '\t' + "" + '\t' + timeString)
     elif part == 2:
         # 发音
         if query[2]:
